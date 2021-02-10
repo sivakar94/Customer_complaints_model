@@ -1,4 +1,4 @@
-from ComplaintsFlask import app
+from Flask import app
 
 if __name__ == "__main__":
     app.run()

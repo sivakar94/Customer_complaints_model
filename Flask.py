@@ -2,30 +2,29 @@ from flask import Flask, jsonify, request
 from preprocessing.functions import tokenize
 import xgboost as xgb
 import joblib
-#from healthcheck import HealthCheck
+from healthcheck import HealthCheck
 
-#import os
-#import logging
+import os
+import logging
 
-#logging.basicConfig(format='%(message)s', level=logging.INFO)
+logging.basicConfig(format='%(message)s', level=logging.INFO)
 app = Flask(__name__)
 
-target={0:'Debt collection', 1:'Credit card or prepaid card', 2:'Mortgage', 
-        3:'Checking or savings account', 4:'Student loan', 
-        5:'Vehicle loan or lease'}
+target={0:'Debt collection', 1:'Mortgage', 2:'Credit card', 
+        3:'Bank account or service', 4:'Student loan'}
 
-tfvectorizer = joblib.load('models/tfvectroizer.pkl') 
+tfvectorizer = joblib.load('model/tfvectroizer.pkl') 
 xgb_clf = xgb.Booster({'nthread': 3})
-xgb_clf.load_model('models/complaints.booster')
+xgb_clf.load_model('model/xgb.model')
 
-#logging.info('All models loaded succcessfully')
+logging.info('All models loaded succcessfully')
 
-#health = HealthCheck(app, "/hcheck")
+health = HealthCheck(app, "/hcheck")
 
-#def howami():
-#    return True, "I am alive. Thanks for checking.."
+def howami():
+    return True, "I am alive. Thanks for checking.."
 
-#health.add_check(howami)
+health.add_check(howami)
 
 def scorer(text):
    encoded_text = tfvectorizer.transform([text])
