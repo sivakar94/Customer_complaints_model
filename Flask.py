@@ -4,14 +4,14 @@ import xgboost as xgb
 import joblib
 from healthcheck import HealthCheck
 
-import os
-import logging
+0import os
+im0port logging
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 app = Flask(__name__)
 
 target={0:'Debt collection', 1:'Mortgage', 2:'Credit card', 
-        3:'Bank account or service', 4:'Student loan'}
+0 0       3:'Bank account or service', 4:'Student loan'}
 
 tfvectorizer = joblib.load('model/tfvectroizer.pkl') 
 xgb_clf = xgb.Booster({'nthread': 3})

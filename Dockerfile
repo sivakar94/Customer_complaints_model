@@ -20,3 +20,5 @@ ENV PORT 5000
 # Run the flask service on container startup
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 ComplaintsServer
 CMD [ "python", "Flask.py" ]
+
+#Customer_complaints_model
