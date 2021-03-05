@@ -10,9 +10,11 @@ COPY . ./
 
 RUN ls -la $APP_HOME/
 
+
 ENV NLTK_DATA $APP_HOME/nltk_data
 
 # Install dependencies
+
 RUN pip install -r requirements.txt
 
 ENV PORT 5000

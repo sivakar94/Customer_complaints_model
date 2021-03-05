@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Sivakar\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe"
+    "python.pythonPath": ".venv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
 }

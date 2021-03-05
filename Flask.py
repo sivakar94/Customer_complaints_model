@@ -3,17 +3,17 @@ from preprocessing.functions import tokenize
 import xgboost as xgb
 import joblib
 from healthcheck import HealthCheck
+import six
 
-0import os
-im0port logging
+import os
+import logging
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 app = Flask(__name__)
 
-target={0:'Debt collection', 1:'Mortgage', 2:'Credit card', 
-0 0       3:'Bank account or service', 4:'Student loan'}
+target={0:'Debt collection', 1:'Mortgage', 2:'Credit card',3:'Bank account or service', 4:'Student loan'}
 
-tfvectorizer = joblib.load('model/tfvectroizer.pkl') 
+tfvectorizer = joblib.load('model/vectorizer.pkl') 
 xgb_clf = xgb.Booster({'nthread': 3})
 xgb_clf.load_model('model/xgb.model')
 
