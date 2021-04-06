@@ -18,7 +18,6 @@ import logging
 app = Flask(__name__)
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
-app = Flask(__name__)
 
 target={0:'Debt collection', 1:'Mortgage', 2:'Credit card',3:'Bank account or service', 4:'Student loan'}
 tfvectorizer = joblib.load('model/vectorizer.pkl') 
