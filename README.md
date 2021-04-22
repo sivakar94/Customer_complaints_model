@@ -3,6 +3,7 @@
 
 Created Customer complaints Multi text classifier and served into a Scalable Flask application
 
+![Application](images/Consumer.png)
 
 
 • Processed the data, created a training pipeline using Tfidf vectorizer and Xgboost Algorithm
@@ -11,7 +12,7 @@ Created Customer complaints Multi text classifier and served into a Scalable Fla
 
 • Created a scalable Flask application using: Gunicorn and Ngnix
 
-![Flask_Application](images/Flask.png)
+![Flask_Application](images/FLASK.png)
 
 • Containerized the Application using Docker and Performed Load testing using Locust
 
