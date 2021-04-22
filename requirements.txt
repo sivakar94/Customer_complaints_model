@@ -5,5 +5,8 @@ nltk
 joblib
 gunicorn
 healthcheck
+locust
+pywebio
+argparse
 
 #pip3 install -r requirements.txt
