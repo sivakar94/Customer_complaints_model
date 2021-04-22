@@ -5,7 +5,6 @@ Created Customer complaints Multi text classifier and served into a Scalable Fla
 
 ![Application](images/Consumer.png)
 
-
 • Processed the data, created a training pipeline using Tfidf vectorizer and Xgboost Algorithm
 
 ![Traning_pipeline](images/Training_pipeline.png)
@@ -27,24 +26,23 @@ Clone the repository
 you can run the following command to run it:
 
 ## Create your environment
-python -m venv .venv
-source .venv/bin/activate
+$ python -m venv .venv
+
+$ source .venv/bin/activate
 
 ## Install dependecies
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 
 ## Run the Flask application
-python Flask.py
+$ python Flask.py
 
 ## Text the application with any input 
 $ curl http://localhost:5000/score -d "{\"text\":\"I Have a federal student loan\"}" -H 'Content-Type: application/json'
 
 ## Now let's Load test it with locust with the following command
-locust -f loadtest.py
+$ locust -f loadtest.py
 
-Try to Simulate it with a different number of users and see how the latency is affected 
-
-The training.ipynb can be accesed above in the training folder
+# Try to Simulate it with a different number of users and see how the latency is affected 
 
 
 
