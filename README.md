@@ -44,7 +44,7 @@ Locust -f test.py
 
 Try to Simulate it with a different number of users and see how the latency is affected 
 
-The training.pynb can be accesed above in the training folder
+The training.ipynb can be accesed above in the training folder
 
 
 
