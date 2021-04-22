@@ -40,7 +40,7 @@ python Flask.py
 $ curl http://localhost:5000/score -d "{\"text\":\"I Have a federal student loan\"}" -H 'Content-Type: application/json'
 
 ## Now let's Load test it with locust with the following command
-Locust -f test.py
+locust -f loadtest.py
 
 Try to Simulate it with a different number of users and see how the latency is affected 
 
