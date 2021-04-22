@@ -1,9 +1,3 @@
-from pywebio.platform.flask import webio_view
-from pywebio import STATIC_PATH
-from flask import Flask
-from pywebio.input import *
-from pywebio.output import *
-
 
 from flask import Flask, jsonify, request
 from preprocessing.functions import tokenize
